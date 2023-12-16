@@ -47,7 +47,7 @@ run : Run = client.beta.threads.runs.retrieve(
 
 # step 6: Display the Assistant's Response
 messages : list[ThreadMessage] = client.beta.threads.messages.list(
-    thread_id= thread.id
+    thread_id = thread.id
 )
 
 for message in reversed(messages.data):
