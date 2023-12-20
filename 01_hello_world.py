@@ -29,3 +29,4 @@ def chat_completion(prompt : str) -> str:
 result = chat_completion("What is 1 + 1 ?")
 print(result)
 
+
