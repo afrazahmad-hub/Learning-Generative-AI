@@ -5,7 +5,7 @@ _ : bool = load_dotenv(find_dotenv())
 client : OpenAI = OpenAI()
 
 response = client.chat.completions.create(
-    model= "gpt-4-vision-preview",
+    model= "gpt-3.5-turbo-1106",
     messages=[
         {
             "role" : "user",

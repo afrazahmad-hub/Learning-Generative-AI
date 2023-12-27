@@ -14,6 +14,7 @@ file = client.files.create(
     file = open("CV_Afraz_use_step7.pdf", "rb"),
     purpose="assistants"
 )
+# print("File", file)
 
 # 2 extra arguments in assistant
 # tools, and file_id
@@ -24,12 +25,13 @@ assistant : Assistant = client.beta.assistants.create(
     tools = [{"type" : "retrieval"}],
     file_ids= [file.id]
 )
+# print("Assistant: ", assistant)
 
 thread : Thread = client.beta.threads.create()
 
 
 message = client.beta.threads.messages.create(
-    thread_id= thread.id,
+    thread_id = thread.id,
     role = "user",
     content= "What is the father name of Afraz Ahmad?"
 )
@@ -39,17 +41,18 @@ run : Run = client.beta.threads.runs.create(
     assistant_id= assistant.id,
     instructions= "Please consider the user as Pakistani."
 )
-# check the run status
-run : Run = client.beta.threads.runs.retrieve(
-    thread_id= thread.id,
-    run_id= run.id
-)
-print(" Run status", run)
+# # check the run status
+# run : Run = client.beta.threads.runs.retrieve(
+#     thread_id= thread.id,
+#     run_id= run.id
+# )
+# # print(" Run status", run)
 
 # display assistant response
 messages : list[ThreadMessage] = client.beta.threads.messages.list(
     thread_id= thread.id
 )
+# print("Messages: ", messages)
 
 for m in reversed(messages.data):
     # print(f"""Answer: \n {m.role} : {m.content[0].text.value} """)
