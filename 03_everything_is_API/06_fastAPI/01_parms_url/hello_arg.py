@@ -16,6 +16,7 @@ def profile(pname: str) -> dict:
 def address(city : str, pname: str) -> dict:
     return {"Address" : f"City Name: {city}. Name: {pname}"}
 
+# we can perform even without running server by using command : uvicorn hello_arg:app --reload
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("hello_arg:app", port=8000, reload=True)
