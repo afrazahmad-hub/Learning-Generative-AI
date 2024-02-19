@@ -1,11 +1,13 @@
 ## Testing Python
 
-Docements link:
-https://docs.pytest.org/en/7.4.x/getting-started.html#getstarted
+[Docements link](https://docs.pytest.org/en/7.4.x/getting-started.html#getstarted)
 
 Run the following command in root directory:
-
 pytest
+
+Test an individual file:
+The -q/--quiet flag keeps the output brief.
+pytest -q test_class.py
 
 pytest will run all files of the form test\__.py or _\_test.py in the current directory and its subdirectories.
 
