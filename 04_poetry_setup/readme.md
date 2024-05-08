@@ -12,7 +12,7 @@ https://python-poetry.org/docs/
    python --version
 2. (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 
-# Step-By-Step guide to installing Poetry on Windows:
+## Step-By-Step guide to installing Poetry on Windows:
 
 1. Open Windows Powershell: Navigate to your Start menu, type "Powershell", and select "Windows Powershell" from the search results.
 
@@ -38,3 +38,26 @@ Wait for Installation to Complete: The installation process may take some time d
 5. Verify Installation: In the new Powershell window, type poetry --version and press Enter. If Poetry has been successfully installed, you should see its version number printed in the terminal.
 
 You have now successfully installed Poetry on your Windows system. You can start using it for managing your Python projects.
+
+# Working on Poetry with FastAPI
+
+1. Create a new project with following command
+   poetry new [project name]
+2. Jump in newly created project
+   cd [project name]
+3. Poetry command to add a new packege
+   While installing the packeges, must be in parent folder
+   poetry add [packege(s) name]
+   poetry add fastapi _uvicorn[standard]_
+   poetry.lock file will also appear in folder
+4. Create a file to work, in subfolder, which is availe with same name of parent folder
+   i.e. mian.py etc
+
+5. Run uvicorn server with following command
+   poetry run foldername.filename:app --reload
+   i.e. poetry run uvicorn fastapi_helloworld.main:app --reload
+6. Then write test
+   create a test file in test folder
+   import testclient from fastapi
+7. Run test
+   poetry run pytest -v
