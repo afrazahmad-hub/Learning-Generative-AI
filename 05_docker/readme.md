@@ -66,7 +66,7 @@ First we need to activate to options from control panel.
 
 6. Check in browser:
 
-   - (localhost)[http://localhost:8000/]
+   - [localhost](http://localhost:8000/)
 
 7. container logs
 
@@ -78,7 +78,9 @@ First we need to activate to options from control panel.
 
 9. List Running Containers
 
-   - docker ps
+```bash
+docker ps
+```
 
 10. List all Containers
 
