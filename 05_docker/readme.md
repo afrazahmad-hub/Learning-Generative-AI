@@ -1,4 +1,6 @@
-We neen Lenix to run docker
+# How to install and work with Docker container
+
+We need Lenix to run docker
 First we need to activate to options from control panel.
 
 1. Enable WSL & Virtulization
@@ -64,7 +66,7 @@ First we need to activate to options from control panel.
 
 6. Check in browser:
 
-   - (http://localhost:8000/)[http://localhost:8000/]
+   - (localhost)[http://localhost:8000/]
 
 7. container logs
 
