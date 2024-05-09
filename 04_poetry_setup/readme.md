@@ -5,13 +5,6 @@
 https://python-poetry.org/docs/
 [Poetry Window Installation](https://gist.github.com/Isfhan/b8b104c8095d8475eb377230300de9b0)
 
-### Steps to install poetry
-
-0. Open power shell
-1. First check weather poetry is installed or not
-   python --version
-2. (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-
 ## Step-By-Step guide to installing Poetry on Windows:
 
 1. Open Windows Powershell: Navigate to your Start menu, type "Powershell", and select "Windows Powershell" from the search results.
@@ -50,7 +43,7 @@ You have now successfully installed Poetry on your Windows system. You can start
    poetry add [packege(s) name]
    poetry add fastapi _uvicorn[standard]_
    poetry.lock file will also appear in folder
-4. Create a file to work, in subfolder, which is availe with same name of parent folder
+4. Create a file to work, in subfolder, which is available with same name of parent folder
    i.e. mian.py etc
 
 5. Run uvicorn server with following command
