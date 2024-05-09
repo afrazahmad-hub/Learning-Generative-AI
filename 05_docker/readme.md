@@ -46,23 +46,33 @@ First we need to activate to options from control panel.
 
 1. Checking to see if Docker is running:
 
-   - docker version
+```bash
+docker version
+```
 
 2. Building the Image for Dev:
 
-   - docker build -f Dockerfile -t my-dev-image .
+```bash
+docker build -f Dockerfile -t my-dev-image .
+```
 
 3. Check Images:
 
-   - docker images
+```bash
+docker images
+```
 
 4. Verify the config:
 
-   - docker inspect my-dev-image
+```bash
+docker inspect my-dev-image
+```
 
 5. Running the Container for Dev:
 
-   - docker run -d --name dev-cont1 -p 8000:8000 my-dev-image
+```bash
+docker run -d --name dev-cont1 -p 8000:8000 my-dev-image
+```
 
 6. Check in browser:
 
@@ -70,11 +80,15 @@ First we need to activate to options from control panel.
 
 7. container logs
 
-   - docker logs dev-cont1
+```bash
+docker logs dev-cont1
+```
 
 8. Test the Container:
 
-   - docker run -it --rm my-dev-image /bin/bash -c "poetry run pytest"
+```bash
+docker run -it --rm my-dev-image /bin/bash -c "poetry run pytest"
+```
 
 9. List Running Containers
 
@@ -84,12 +98,18 @@ docker ps
 
 10. List all Containers
 
-- docker ps -a
+```bash
+docker ps -a
+```
 
 11. Intract with the Container:
 
-- docker exec -it dev-cont1 /bin/bash
+```bash
+docker exec -it dev-cont1 /bin/bash
+```
 
 12. Exit from the container shell
 
-- exit
+```bash
+exit
+```
