@@ -1,0 +1,22 @@
+version: "1.0.0"
+name: "compose_helloworld"
+
+services:
+  api:
+    build:
+      # Docker file path & name
+      context: ./
+      dockerfile: "Dockerfile"
+    ports:
+      - "8000:8000"
+# version: "3.9"
+
+# name: myapi
+
+# services:
+#   api:
+#     build:
+#       context: ./todo
+#       dockerfile: Dockerfile.dev
+#     ports:
+#       - "8000:8000"  # Expose container port 8000 to host port 8000
